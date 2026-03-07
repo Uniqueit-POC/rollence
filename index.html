@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
+
+        body {
+            font-family: 'Overpass', sans-serif;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- start header  -->
+    <header
+        class="fixed top-0 left-0 w-full h-[90px] bg-white flex justify-between items-center z-[99] shadow-[0px_7px_59px_0_rgba(0,0,0,0.1)] px-4 lg:px-[70px]">
+
+        <div class="flex-shrink-0">
+            <a href="https://www.rollence.in/">
+                <img src="https://www.rollence.in/assets/img/mainlogo.png" alt="RollenceLogo"
+                    class="w-[180px] lg:w-[210px] h-auto object-contain">
+            </a>
+        </div>
+
+        <nav class="hidden lg:block absolute left-1/2 -translate-x-1/2 w-auto">
+            <ul class="flex items-center space-x-1">
+                <li><a href="#"
+                        class="px-3 py-10 text-[14px] font-bold text-[#f7a708] tracking-normal transition-colors uppercase">Home</a>
+                </li>
+
+                <li class="relative group">
+                    <a href="#"
+                        class="px-4 py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase whitespace-nowrap">
+                        Why Us? <i class="fa fa-caret-down ml-1 text-[10px]"></i>
+                    </a>
+                    <ul
+                        class="absolute top-[57px] left-0 w-[250px] bg-white shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border-t-2 border-[#0c5c77]">
+                        <li><a href="#"
+                                class="block px-5 py-3 text-[13px] font-bold text-black border-b border-gray-50 hover:bg-gray-50 uppercase">About
+                                Us</a></li>
+                        <li><a href="#"
+                                class="block px-5 py-3 text-[13px] font-bold text-black border-b border-gray-50 hover:bg-gray-50 uppercase">Quality</a>
+                        </li>
+                        <li><a href="#"
+                                class="block px-5 py-3 text-[13px] font-bold text-black border-b border-gray-50 hover:bg-gray-50 uppercase">Certificates</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="group static">
+                    <a href="#"
+                        class="inline-block px-3 py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase transition-colors">
+                        Products
+                    </a>
+
+                    <div
+                        class="absolute left-0 right-0 top-full hidden group-hover:block bg-white border-t-4 border-[#0c5c77] shadow-xl z-50">
+                        <div class="max-w-7xl mx-auto p-4 md:p-8 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8">
+
+                            <div class="md:col-span-4">
+                                <h3 class="text-sm md:text-[14px] font-bold uppercase mb-4 border-b pb-4">Large Format GVT/PGVT
+                                </h3>
+                                <div class="relative overflow-hidden rounded-sm">
+                                    <img src="https://www.rollence.in/assets/img/menu/menup.jpg" alt="Interior"
+                                        class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+
+                            <div class="md:col-span-2">
+                                <h3 class="text-sm md:text-[14px] font-bold uppercase mb-4 border-b pb-4">By Size</h3>
+                                <ul class="space-y-3">
+                                    <li><a href="#"
+                                            class="block p-2 md:p-3 border border-gray-200 text-xs font-semibold text-center hover:bg-gray-50 uppercase">1000
+                                            x 1000mm</a></li>
+                                    <li><a href="#"
+                                            class="block p-2 md:p-3 border border-gray-200 text-xs font-semibold text-center hover:bg-gray-50 uppercase">1200
+                                            x 1200 mm</a></li>
+                                    <li><a href="#"
+                                            class="block p-2 md:p-3 border border-gray-200 text-xs font-semibold text-center hover:bg-gray-50 uppercase">1200
+                                            x 1800 mm</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="md:col-span-3">
+                                <h3 class="text-sm md:text-[14px] font-bold uppercase mb-4 border-b pb-4">By Series</h3>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <a href="#"
+                                        class="h-16 md:h-20 flex items-center justify-center rounded-xl text-[8px] md:text-[10px] font-bold text-black border border-gray-200 bg-cover bg-center text-center px-1"
+                                        style="background-image: url('https://www.rollence.in/uploads/app_logo/i0nToH.jpg')">STATUARIO</a>
+                                    <a href="#"
+                                        class="h-16 md:h-20 flex items-center justify-center rounded-xl text-[8px] md:text-[10px] font-bold text-black border border-gray-200 bg-cover bg-center text-center px-1"
+                                        style="background-image: url('https://www.rollence.in/uploads/app_logo/zcAa8p.jpg')">GREY/SILVER</a>
+                                    <a href="#"
+                                        class="h-16 md:h-20 flex items-center justify-center rounded-xl text-[8px] md:text-[10px] font-bold text-black border border-gray-200 bg-cover bg-center text-center px-1"
+                                        style="background-image: url('https://www.rollence.in/uploads/app_logo/sZFh3S.jpg')">BEIGE/CREMA</a>
+                                    <a href="#"
+                                        class="h-16 md:h-20 flex items-center justify-center rounded-xl text-[8px] md:text-[10px] font-bold text-black border border-gray-200 bg-cover bg-center text-center px-1"
+                                        style="background-image: url('https://www.rollence.in/uploads/app_logo/8EbsLz.jpg')">ONYX</a>
+                                    <a href="#"
+                                        class="h-16 md:h-20 flex items-center justify-center rounded-xl text-[8px] md:text-[10px] font-bold text-black border border-gray-200 bg-cover bg-center text-center px-1"
+                                        style="background-image: url('https://www.rollence.in/uploads/app_logo/HnPNzX.jpg')">NATURAL</a>
+                                </div>
+                            </div>
+
+                            <div class="md:col-span-3">
+                                <h3 class="text-sm md:text-[14px] font-bold uppercase mb-4 border-b pb-4">By Finish</h3>
+                                <div class="space-y-2">
+                                    <a href="#"
+                                        class="block h-10 md:h-12 flex items-center px-2 md:px-4 font-bold text-white text-xs uppercase bg-cover bg-center brightness-90 hover:brightness-110"
+                                        style="background-image: url('https://www.rollence.in/uploads/serieslogo/73EgnV.jpg')">Glossy</a>
+                                    <a href="#"
+                                        class="block h-10 md:h-12 flex items-center px-2 md:px-4 font-bold text-white text-xs uppercase bg-cover bg-center brightness-75 hover:brightness-100"
+                                        style="background-image: url('https://www.rollence.in/uploads/serieslogo/UW0GCS.jpg')">Brilia</a>
+                                    <a href="#"
+                                        class="block h-10 md:h-12 flex items-center px-2 md:px-4 font-bold text-white text-xs uppercase bg-cover bg-center brightness-50 hover:brightness-90"
+                                        style="background-image: url('https://www.rollence.in/uploads/serieslogo/bcjozh.jpg')">High
+                                        Gloss</a>
+                                    <a href="#"
+                                        class="block h-10 md:h-12 flex items-center px-2 md:px-4 font-bold text-white text-xs uppercase bg-cover bg-center brightness-75 hover:brightness-100"
+                                        style="background-image: url('https://www.rollence.in/uploads/serieslogo/RBbefU.jpg')">Marble</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#"
+                        class="px-3 py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase whitespace-nowrap">Global
+                        Presence</a></li>
+                <li><a href="#"
+                        class="px-3 py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase">Downloads</a>
+                </li>
+                <li><a href="#"
+                        class="px-3 py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase">Utilities</a>
+                </li>
+                <li><a href="#"
+                        class="px-3 py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase whitespace-nowrap">Contact
+                        Us</a></li>
+
+            </ul>
+        </nav>
+
+        <div class="hidden lg:flex items-center h-full bg-[#0c5c77] px-10 space-x-9 absolute right-0">
+            <a href="#" class="text-white hover:opacity-75 transition-opacity"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white hover:opacity-75 transition-opacity"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white hover:opacity-75 transition-opacity"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-white hover:opacity-75 transition-opacity"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white hover:opacity-75 transition-opacity"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+
+        <button class="lg:hidden flex flex-col justify-center items-end space-y-1 group" id="mobile-menu-button">
+            <span class="w-8 h-1 bg-[#0c5c77] block"></span>
+            <span class="w-5 h-1 bg-[#0c5c77] block group-hover:w-8 transition-all"></span>
+            <span class="w-7 h-1 bg-[#0c5c77] block"></span>
+        </button>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-full h-full bg-white z-50 transform -translate-x-full transition-transform duration-300 hidden">
+            <div class="flex justify-between items-center p-4 border-b">
+                <img src="https://www.rollence.in/assets/img/mainlogo.png" alt="RollenceLogo" class="w-[150px] h-auto">
+                <button id="close-menu" class="text-[#0c5c77] text-2xl">&times;</button>
+            </div>
+            <nav class="p-4">
+                <ul class="space-y-4">
+                    <li><a href="#" class="block py-2 text-[#f7a708] font-bold uppercase">Home</a></li>
+                    <li class="border-t pt-4">
+                        <a href="#" class="block py-2 text-black font-bold uppercase">Why Us? <i class="fa fa-caret-down ml-1"></i></a>
+                        <ul class="ml-4 mt-2 space-y-2">
+                            <li><a href="#" class="block py-1 text-sm text-gray-600 hover:text-[#0c5c77]">About Us</a></li>
+                            <li><a href="#" class="block py-1 text-sm text-gray-600 hover:text-[#0c5c77]">Quality</a></li>
+                            <li><a href="#" class="block py-1 text-sm text-gray-600 hover:text-[#0c5c77]">Certificates</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="block py-2 text-black font-bold uppercase">Products</a></li>
+                    <li><a href="#" class="block py-2 text-black font-bold uppercase">Global Presence</a></li>
+                    <li><a href="#" class="block py-2 text-black font-bold uppercase">Downloads</a></li>
+                    <li><a href="#" class="block py-2 text-black font-bold uppercase">Utilities</a></li>
+                    <li><a href="#" class="block py-2 text-black font-bold uppercase">Contact Us</a></li>
+                </ul>
+                <div class="mt-8 flex justify-center space-x-4">
+                    <a href="#" class="text-[#0c5c77] hover:opacity-75"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-[#0c5c77] hover:opacity-75"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-[#0c5c77] hover:opacity-75"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-[#0c5c77] hover:opacity-75"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-[#0c5c77] hover:opacity-75"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="h-[90px]"></div>
+    <!-- end header  -->
+
+    <!-- Side buttons -->
+    <div class="fixed left-2 md:left-6 top-1/2 -translate-y-1/2 z-[100] hidden md:flex items-center">
+        <a href="#"
+            class="bg-[#075971] text-white py-2 md:py-3 px-2 md:px-4 flex items-center gap-2 shadow-lg transition-transform hover:scale-105"
+            style="writing-mode: sideways-lr; text-orientation: mixed;">
+            <i class="fa fa-cubes rotate-90 mb-2"></i>
+            <span class="uppercase tracking-[3px] text-[10px] md:text-[13px] font-semibold py-2">Tiles View</span>
+        </a>
+    </div>
+
+    <div class="fixed right-2 md:right-6 top-1/2 -translate-y-1/2 z-[100] hidden md:flex items-center">
+        <a href="#"
+            class="bg-black text-white py-4 md:py-6 px-2 md:px-3 flex flex-col items-center shadow-lg transition-transform hover:scale-105"
+            style="writing-mode: sideways-lr; text-orientation: mixed;">
+            <span class="uppercase tracking-[2px] text-[12px] md:text-[16px] font-bold">Quick Enquiry</span>
+        </a>
+    </div>
+
+    <div class="fixed left-2 md:left-6 bottom-2 md:bottom-6 z-[100] group">
+        <a href="https://wa.me/YOURNUMBER" target="_blank"
+            class="flex items-center gap-2 md:gap-3 bg-white text-[#0c5c77] px-3 md:px-6 py-1 md:py-2 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.1)] border border-gray-100 hover:scale-105 transition-transform">
+            <div class="relative">
+                <i class="fab fa-whatsapp text-lg md:text-2xl text-[#0c5c77]"></i>
+            </div>
+            <span class="font-bold text-xs md:text-sm tracking-tight hidden sm:inline">Chat With Us</span>
+            <span class="absolute top-0 right-0 w-2 h-2 md:w-3 md:h-3 bg-[#f7a707] border-2 border-white rounded-full"></span>
+        </a>
+    </div>
+
+    <div class="fixed right-2 md:right-6 bottom-2 md:bottom-6 z-[100]">
+        <button
+            class="w-10 h-10 md:w-14 md:h-14 bg-[#0c5c77] rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+            <svg class="w-5 h-5 md:w-7 md:h-7 text-white fill-current" viewBox="0 0 24 24">
+                <path
+                    d="M12 2C6.477 2 2 6.477 2 12c0 1.821.487 3.53 1.338 5L2 22l5-1.338c1.47.851 3.179 1.338 5 1.338 5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.477 0-2.854-.395-4.041-1.082l-2.895.776.776-2.895A7.953 7.953 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z" />
+            </svg>
+        </button>
+    </div>
+
+    <section class="relative w-full h-screen md:h-auto overflow-hidden group">
+        <div id="slider" class="flex transition-transform duration-700 ease-in-out h-full">
+            <div class="min-w-full h-full"><img src="https://www.rollence.in/uploads/slider/h733cr.jpg"
+                    class="w-full h-full object-cover" alt="Slide 0"></div>
+            <div class="min-w-full h-full"><img src="https://www.rollence.in/uploads/slider/o_1f677ag4aros1g4m189r115398d.jpg"
+                    class="w-full h-full object-cover" alt="Slide 1"></div>
+            <div class="min-w-full h-full"><img
+                    src="https://www.rollence.in/uploads/slider/o_1ibqr5gds138d12c61unu87c1auqe.jpg"
+                    class="w-full h-full object-cover" alt="Slide 2"></div>
+            <div class="min-w-full h-full"><img
+                    src="https://www.rollence.in/uploads/slider/o_1f677ag4acll1c351p5119g216n0g.jpg"
+                    class="w-full h-full object-cover" alt="Slide 3"></div>
+        </div>
+
+    </section>
+    <!-- end hero banner -->
+
+    <!-- start Why choose us? -->
+    <section class="relative bg-[#F5F6F8] py-20 overflow-hidden">
+        <div
+            class="absolute -top-[110px] -left-[130px] w-[350px] h-[350px] border-[40px] border-double border-[#0c5c77]/10 rounded-full -rotate-45 pointer-events-none">
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row gap-12 items-start">
+                <div class="w-full md:w-xl mx-auto">
+                    <div class="flex flex-col lg:flex-row items-center gap-10">
+                        <div class="w-full lg:w-1/2 space-y-6 px-5">
+                            <h2 class="text-[#0c5c77] text-2xl md:text-3xl lg:text-[40px] font-semibold">Why choose us?</h2>
+                            <div class="space-y-4 text-[#7d7d7d] text-sm leading-relaxed">
+                                <p class="text-sm md:text-base font-extralight text-[#7d7d7d] leading-normal">
+                                    Rollence Granito is a place where you can look through sharp vision, global market,
+                                    and innovative techniques in design outlook. Our organization has the vision to
+                                    investigate the worldwide zone with the most stylish item, cost, newness and
+                                    advancement, bundling, and people groups. We made supreme quality coated tiles with
+                                    inventive viewpoints.
+                                </p>
+                                <p class="text-sm md:text-base font-extralight text-[#7d7d7d] leading-normal">
+                                    Expert and specialists will investigate all the most recent patterns in the market
+                                    to offer fulfilment to the customers, We are affirmed by the ISO 9001-2015, ISO
+                                    14001-2015 for keeping up condition, with quality norms and safety management
+                                    systems.
+                                </p>
+                            </div>
+                            <div class="pt-4">
+                                <a href="https://www.rollence.in/about-us"
+                                    class="pb-3 inline-block text-[#757575] text-sm font-bold tracking-[2.8px] border-b-2 border-gray-300 pb-2 hover:text-black hover:border-[#0c5c77] transition-all">
+                                    READ MORE
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="w-full lg:w-1/2 relative">
+                            <div class="relative z-10">
+                                <img src="https://www.rollence.in/assets/img/home/about1.png" alt="About Rollence"
+                                    class="w-full h-auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end Why choose us? -->
+
+    <!-- start Our Collection -->
+    <div class="bg-white font-sans overflow-hidden">
+        <section class="relative py-20 px-4" id="collection-section">
+
+            <div class="text-center mb-10 relative z-30">
+                <h2 class="text-[#0c5c77] text-3xl md:text-[40px] font-semibold">Our Collection</h2>
+                <h4 class="mb-2 font-medium leading-tight text-[#212529] text-2xl mt-2">Excellence Forever</h4>
+            </div>
+
+            <div class="max-w-7xl px-4 sm:px-6 md:px-10 lg:px-14 mx-auto relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-12">
+
+                    <div class="relative group">
+                        <div class="relative z-20 px-8 transition-transform duration-700 group-hover:-translate-y-4">
+                            <a href="https://www.rollence.in/product">
+                                <img src="https://www.rollence.in/assets/img/slider/1.jpg" alt="GVT"
+                                    class="w-full shadow-2xl">
+                            </a>
+                        </div>
+                        <div class="bg-[#0c5c77] text-white pt-32 pb-8 px-8 -mt-24 relative z-10">
+                            <h3 class="text-xl font-bold mb-3 uppercase">Large Format GVT/PGVT</h3>
+                            <p class="text-blue-100 text-sm mb-6">GVT/PGVT are commonly used to cover floors and walls.
+                            </p>
+                            <div class="border-b border-blue-200/50 inline-block pb-2">
+                                <a href="#"
+                                    class="text-blue-100 text-xs font-bold tracking-[2.8px] hover:text-white transition-colors uppercase">Read
+                                    More</a>
+                            </div>
+                        </div>
+
+                        <div class="parallax-item absolute -left-8 md:-left-12 top-0 w-20 h-20 md:w-[120px] md:h-[120px] rounded-full shadow-2xl z-40 hidden lg:block will-change-transform transition-transform duration-75 ease-out"
+                            data-speed="-0.5"
+                            style="background-image: url('https://www.rollence.in/assets/img/home/narble6.jpg'); background-size: cover; background-position: center;">
+                        </div>
+                    </div>
+
+                    <div class="relative group ">
+                        <div class="relative z-20 px-8 transition-transform duration-700 group-hover:-translate-y-4">
+                            <a href="https://www.rollence.in/product">
+                                <img src="https://www.rollence.in/assets/img/slider/3.jpg" alt="Vitrified Tiles"
+                                    class="w-full shadow-2xl">
+                            </a>
+                        </div>
+                        <div class="bg-[#0c5c77] text-white pt-32 pb-8 px-8 -mt-24 relative z-10">
+                            <h3 class="text-xl font-bold mb-3 uppercase leading-tight">Glazed Vitrified Tiles</h3>
+                            <p class="text-blue-100 text-sm mb-6">Quality of life actually begins at home.</p>
+                            <div class="border-b border-blue-200/50 inline-block pb-2">
+                                <a href="#"
+                                    class="text-blue-100 text-xs font-bold tracking-[2.8px] hover:text-white transition-colors uppercase">Read
+                                    More</a>
+                            </div>
+                        </div>
+
+                        <div class="parallax-item absolute -left-12 md:-left-16 -bottom-[48px] md:-bottom-[64px] w-16 h-16 md:w-[120px] md:h-[120px] rounded-full shadow-2xl z-40 hidden lg:block will-change-transform transition-transform duration-75 ease-out"
+                            data-speed="-0.4"
+                            style="background-image: url('https://www.rollence.in/assets/img/home/marble4.jpg'); background-size: cover;">
+                        </div>
+
+                        <div class="parallax-item absolute -right-16 md:-right-20 top-1/2 w-20 h-20 md:w-[120px] md:h-[120px] rounded-full shadow-2xl z-40 hidden lg:block will-change-transform transition-transform duration-75 ease-out"
+                            data-speed="-0.6"
+                            style="background-image: url('https://www.rollence.in/assets/img/home/marble7.jpg'); background-size: cover;">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- end Our Collection -->
+
+    <!-- satrt Make Your Home Beautiful With -->
+    <section class="relative py-20 bg-[#F5F6F8] overflow-hidden" id="large-surfaces">
+
+        <div class="absolute top-10 left-[10%] w-32 h-32 border-2 border-gray-200 rounded-full opacity-40"></div>
+        <div class="absolute bottom-20 right-[5%] w-48 h-48 border-2 border-gray-300 rounded-full opacity-20"></div>
+        <div class="absolute top-1/2 left-[-5%] w-64 h-64 border-2 border-gray-100 rounded-full opacity-30"></div>
+
+        <div class="max-w-7xl px-4 sm:px-6 md:px-10 lg:px-14 mx-auto relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-[#0c5c77] text-3xl md:text-[40px] font-semibold" data-aos="fade-up">
+                    Make Your Home Beautiful With
+                </h2>
+                <h3 class="mb-2 font-medium leading-tight text-[#212529] text-2xl mt-2" data-aos="fade-up"
+                    data-aos-delay="200">
+                    Large Surfaces
+                </h3>
+            </div>
+
+            <div class="flex justify-center items-center" data-aos="fade-up" data-aos-duration="1500">
+                <div class="w-full shadow-sm ">
+                    <img src="https://www.rollence.in/assets/img/homepage-product-section-min.jpg"
+                        alt="Large Surface Dimensions" class="w-full h-auto object-contain">
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- end Make Your Home Beautiful With -->
+
+    <!-- start Online Tiles Visualizer -->
+    <section class="relative bg-white py-20 overflow-hidden">
+        <div class="max-w-7xl px-4 sm:px-6 md:px-10 lg:px-14 mx-auto">
+
+            <div class="flex flex-col md:flex-row items-start gap-8 mb-16">
+                <div class="w-full md:w-1/3 px-3">
+                    <div class="relative min-h-[200px] md:min-h-[250px] flex items-start pt-10 md:pt-20 px-4 md:px-0">
+                        <div class="absolute top-0 left-0 md:left-16 w-full h-[200px] md:h-[252px] opacity-100 z-0 bg-no-repeat bg-contain pointer-events-none"
+                            style="background-image: url('https://www.rollence.in/assets/img/icons/ind_bj2.png');">
+                        </div>
+                        <h2 class="relative z-10 text-3xl md:text-4xl lg:text-5xl font-bold text-black leading-tight ">
+                            Online Tiles <br> Visualizer
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-2/3 space-y-4">
+                    <blockquote class="font-bold tracking-wider text-lg mt-4">
+                        "Choose a Unique and Innovative Outlook for Your Living..."
+                    </blockquote>
+                    <p class="text-[#7d7d7d] mb-[25px] leading-relaxed text-justify max-w-3xl">
+                        Tiles Visualizer is an imaginative strategy for the customer to give them the viewpoint of
+                        structure and envision their item. This method is utilized to get the thought regarding the
+                        upgrade of any task through representation.
+                    </p>
+                    <div class="pt-4">
+                        <a href="https://tilesview.com/app/login.php?login_backend=MzIyM3RpbGVzcHJldmlld18xOTk0"
+                            target="_blank"
+                            class="bg-[#0c5c77] px-12 pt-3 pb-3 leading-tight text-white text-md tracking-widest border border-black hover:bg-white hover:text-black hover:shadow-[0_10px_10px_-10px_#000]">
+                            Tiles Visualizer
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="comparison-container"
+                class="relative w-full overflow-hidden shadow-[0_15px_20px_-18px_rgba(0,0,0,1)] select-none aspect-video md:aspect-[2/1]">
+
+                <div class="absolute inset-0 bg-cover bg-no-repeat"
+                    style="background-image: url('https://www.rollence.in/assets/img/home/visnone.jpg'); background-position: center;">
+                </div>
+
+                <div id="divisor"
+                    class="absolute top-0 left-0 h-full overflow-hidden border-r-2 border-white/30 shadow-xl"
+                    style="width: 50%;">
+                    <div class="absolute inset-0 bg-cover bg-no-repeat"
+                        style="background-image: url('https://www.rollence.in/assets/img/home/vis.jpg'); background-position: center; width: 100%; height: 100%;">
+                    </div>
+                </div>
+
+                <div id="handle"
+                    class="absolute top-1/2 -translate-y-[127%] -translate-x-1/2 w-[50px] h-[50px] bg-[#0c5c77] rounded-full z-10 flex items-center justify-center cursor-ew-resize shadow-lg"
+                    style="left: 50%;">
+                    <div class="flex items-center gap-1">
+                        <div
+                            class="w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-r-[6px] border-r-white">
+                        </div>
+                        <div
+                            class="w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[6px] border-l-white">
+                        </div>
+                    </div>
+                </div>
+
+                <input type="range" min="0" max="100" value="50"
+                    class="absolute inset-0 w-full h-full opacity-0 cursor-all-scroll z-20"
+                    oninput="moveDivisor(this.value)">
+            </div>
+        </div>
+    </section>
+    <!-- end Online Tiles Visualizer -->
+
+    <!-- start footer -->
+    <footer class="bg-[#f8f9fa] pt-16 relative overflow-hidden">
+        <div class="absolute -top-10 -left-10 w-40 h-40 border-2 border-gray-200 rounded-full opacity-30"></div>
+
+        <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-6 pb-12 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-6">
+
+                <!-- First Column - Logo, Social & Intro -->
+                <div class="space-y-6">
+                    <img src="https://www.rollence.in/assets/img/mainlogo.png" alt="Rollence Granito"
+                        class="w-40 h-auto">
+
+                    <div>
+                        <h3 class="text-[#075971] font-bold text-lg mb-3 uppercase tracking-wider">ROLLENCE GRANITO</h3>
+                        <div class="flex gap-2 mb-4">
+                            <a href="#" title="Facebook" class="relative group">
+                                <div
+                                    class="w-10 h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
+                                    <i
+                                        class="fab fa-facebook-f text-[#075971] text-sm group-hover:text-white transition-colors"></i>
+                                </div>
+                                <span
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Facebook</span>
+                            </a>
+                            <a href="#" title="Instagram" class="relative group">
+                                <div
+                                    class="w-10 h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
+                                    <i
+                                        class="fab fa-instagram text-[#075971] text-sm group-hover:text-white transition-colors"></i>
+                                </div>
+                                <span
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Instagram</span>
+                            </a>
+                            <a href="#" title="LinkedIn" class="relative group">
+                                <div
+                                    class="w-10 h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
+                                    <i
+                                        class="fab fa-linkedin-in text-[#075971] text-sm group-hover:text-white transition-colors"></i>
+                                </div>
+                                <span
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">LinkedIn</span>
+                            </a>
+                            <a href="#" title="Twitter" class="relative group">
+                                <div
+                                    class="w-10 h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
+                                    <i
+                                        class="fab fa-twitter text-[#075971] text-sm group-hover:text-white transition-colors"></i>
+                                </div>
+                                <span
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Twitter</span>
+                            </a>
+                            <a href="#" title="Pinterest" class="relative group">
+                                <div
+                                    class="w-10 h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
+                                    <i
+                                        class="fab fa-pinterest-p text-[#075971] text-sm group-hover:text-white transition-colors"></i>
+                                </div>
+                                <span
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Pinterest</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-600 leading-relaxed">Rollence Granito is a place where you can look
+                        through sharp vision, global market, and innovative techniques in design outlook.</p>
+                </div>
+
+                <!-- Technical Corner -->
+                <div>
+                    <h3 class="text-[#075971] font-bold text-lg mb-6 uppercase tracking-wider">Technical Corner</h3>
+                    <ul class="space-y-3 text-sm text-gray-600 font-medium">
+                        <li><a href="#" class="hover:text-[#075971] transition-all hover:pl-2">Quality</a></li>
+                        <li><a href="#" class="hover:text-[#075971] transition-all hover:pl-2">Tile Calculator</a></li>
+                        <li><a href="#" class="hover:text-[#075971] transition-all hover:pl-2">Rollence Media</a></li>
+                        <li><a href="#" class="hover:text-[#075971] transition-all hover:pl-2">Global Presence</a></li>
+                        <li><a href="#" class="hover:text-[#075971] transition-all hover:pl-2">Care & Maintenance</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-[#075971] font-bold text-lg mb-6 uppercase tracking-wider">Quick Links</h3>
+                    <ul class="space-y-3 text-sm text-gray-600 font-medium">
+                        <li><a href="#" class="hover:text-[#075971] transition-all hover:pl-2">Home</a></li>
+                        <li><a href="#" class="hover:text-[#075971] transition-all hover:pl-2">About Us</a></li>
+                        <li><a href="#" class="hover:text-[#075971] transition-all hover:pl-2">Certificates</a></li>
+                        <li><a href="#" class="hover:text-[#075971] transition-all hover:pl-2">Downloads</a></li>
+                        <li><a href="#" class="hover:text-[#075971] transition-all hover:pl-2">TILES VISUALIZER</a></li>
+                    </ul>
+                </div>
+
+                <!-- Export Worldwide -->
+                <div>
+                    <h3 class="text-[#075971] font-bold text-lg mb-6 uppercase tracking-wider">Export Worldwide</h3>
+                    <ul class="space-y-3 text-sm text-gray-600 font-medium leading-tight">
+                        <li><a href="#" class="hover:text-[#075971]">1200 x 1200 mm Iraq</a></li>
+                        <li><a href="#" class="hover:text-[#075971]">800 x 1600 mm Egypt</a></li>
+                        <li><a href="#" class="hover:text-[#075971]">1200 x 1800 mm Iraq</a></li>
+                        <li><a href="#" class="hover:text-[#075971]">800 x 1600 mm Iraq</a></li>
+                    </ul>
+                </div>
+
+                <!-- Last Column - Contact Info -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-[#075971] font-bold text-lg mb-3 uppercase tracking-wider">For Domestic Inquiry
+                        </h3>
+                        <div class="space-y-2 text-sm text-gray-600">
+                            <p class="flex items-center gap-3"><i class="fa fa-envelope text-[#075971]"></i> <a
+                                    href="mailto:info@rollence.in"
+                                    class="hover:text-orange-500 transition-colors">info@rollence.in</a></p>
+                            <p class="flex items-center gap-3"><i class="fa fa-headphones text-[#075971]"></i> <a
+                                    href="tel:+919726055557" class="hover:text-orange-500 transition-colors">+91 97260
+                                    55557</a></p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-[#075971] font-bold text-lg mb-3 uppercase tracking-wider">For Export Inquiry
+                        </h3>
+                        <div class="space-y-2 text-sm text-gray-600">
+                            <p class="flex items-center gap-3"><i class="fa fa-envelope text-[#075971]"></i> <a
+                                    href="mailto:export@rollence.in"
+                                    class="hover:text-orange-500 transition-colors">export@rollence.in</a></p>
+                            <p class="flex items-center gap-3"><i class="fa fa-headphones text-[#075971]"></i> <a
+                                    href="tel:+919879470126" class="hover:text-orange-500 transition-colors">+91 98794
+                                    70126</a></p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-[#075971] font-bold text-lg mb-3 uppercase tracking-wider">Reach Us</h3>
+                        <div class="flex gap-4 text-sm text-gray-600 leading-relaxed">
+                            <i class="fas fa-map-marker-alt text-[#075971] text-lg mt-1 flex-shrink-0"></i>
+                            <p>
+                                Sr. No. 197, Matel Road,<br>
+                                Opp. Amardham Ashram,<br>
+                                Matel-363621, Dist: Morbi,<br>
+                                Gujarat, INDIA.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom - Copyright -->
+        <div class="bg-[#075971] border-t border-gray-100 py-4 mt-4">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-6 max-w-7xl">
+                <div class="flex flex-col md:flex-row justify-center items-center">
+                    <!-- Copyright -->
+                    <p class="text-xs text-white font-medium uppercase tracking-widest text-center">
+                        © 2026 Rollence Granito | Designed by <a href="#"
+                            class="text-orange-400 hover:text-orange-300">Lightlink Solutions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- // start Simple toggle for mobile menu -->
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const closeBtn = document.getElementById('close-menu');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => menu.classList.remove('hidden'));
+        closeBtn.addEventListener('click', () => menu.classList.add('hidden'));
+    </script>
+    <!-- // start Simple toggle for mobile menu -->
+
+    <!-- start hero banneer -->
+    <script>
+        let currentSlide = 0;
+        const slider = document.getElementById('slider');
+        const totalSlides = slider.children.length;
+
+        setInterval(() => {
+            currentSlide++;
+            if (currentSlide >= totalSlides) {
+                currentSlide = 0;
+            }
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }, 5000);
+    </script>
+    <!-- end hero banneer -->
+
+    <!-- start Online Tiles Visualizer -->
+    <script>
+        function moveDivisor(val) {
+            const divisor = document.getElementById('divisor');
+            const handle = document.getElementById('handle');
+            const container = document.getElementById('comparison-container');
+
+            divisor.style.width = val + "%";
+            handle.style.left = val + "%";
+
+            const innerImg = divisor.querySelector('div');
+            innerImg.style.width = container.offsetWidth + 'px';
+        }
+
+        window.addEventListener('resize', () => {
+            const val = document.querySelector('input[type="range"]').value;
+            moveDivisor(val);
+        });
+        window.addEventListener('DOMContentLoaded', () => moveDivisor(50));
+    </script>
+    <!-- end Online Tiles Visualizer -->
+
+
+</body>
+
+</html>
