@@ -26,58 +26,72 @@
             scrollbar-width: none;
         }
     </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        'max-1400': { 'raw': '(max-width: 1400px)' }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body class="bg-gray-50">
 
     <!-- start header  -->
     <header
-        class="fixed top-0 left-0 w-full h-[90px] bg-white flex justify-between items-center z-[99] shadow-[0px_7px_59px_0_rgba(0,0,0,0.1)] px-4 lg:px-[70px]">
+        class="fixed top-0 left-0 w-full h-[90px] bg-white flex justify-between items-center z-[99] shadow-[0px_7px_59px_0_rgba(0,0,0,0.1)] px-5 sm:px-5 md:px-10 lg:px-10 xl:px-[70px] 2xl:px-[70px]">
 
         <div class="flex-shrink-0">
             <a href="https://www.rollence.in/">
                 <img src="https://www.rollence.in/assets/img/mainlogo.png" alt="RollenceLogo"
-                    class="w-[180px] lg:w-[210px] h-auto object-contain">
+                    class="w-[130px] sm:w-[140px] md:w-[150px] lg:w-[180px] xl:w-[210px] 2xl:w-[210px] h-auto object-contain">
             </a>
         </div>
 
-        <nav class="hidden lg:block absolute left-1/2 -translate-x-1/2 w-auto">
+        <nav class="hidden xl:block absolute left-1/2 -translate-x-1/2 w-auto max-w-[500px] lg:max-w-none">
             <ul class="flex items-center space-x-1">
-                <li><a href="#"
-                        class="px-3 py-10 text-[14px] font-bold text-[#f7a708] tracking-normal transition-colors uppercase">Home</a>
+                <li><a href="index.html"
+                        class="px-2 py-[15px] md:px-4 md:py-8 lg:px-[15px] xl:py-10 text-[14px] font-bold text-[#f7a708] tracking-normal transition-colors uppercase">Home</a>
                 </li>
 
                 <li class="relative group">
                     <a href="#"
-                        class="px-4 py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase whitespace-nowrap">
+                        class="px-2 py-[15px] md:px-4 md:py-8 lg:px-[15px] xl:py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase whitespace-nowrap">
                         Why Us? <i class="fa fa-caret-down ml-1 text-[10px]"></i>
                     </a>
                     <ul
                         class="absolute top-[57px] left-0 w-[250px] bg-white shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border-t-2 border-[#0c5c77]">
-                        <li><a href="#"
+                        <li><a href="about-us.html"
                                 class="block px-5 py-3 text-[13px] font-bold text-black border-b border-gray-50 hover:bg-gray-50 uppercase">About
                                 Us</a></li>
-                        <li><a href="#"
+                        <li><a href="quality.html"
                                 class="block px-5 py-3 text-[13px] font-bold text-black border-b border-gray-50 hover:bg-gray-50 uppercase">Quality</a>
                         </li>
-                        <li><a href="#"
+                        <li><a href="certificate.html"
                                 class="block px-5 py-3 text-[13px] font-bold text-black border-b border-gray-50 hover:bg-gray-50 uppercase">Certificates</a>
                         </li>
                     </ul>
                 </li>
 
                 <li class="group static">
-                    <a href="#"
-                        class="inline-block px-3 py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase transition-colors">
+                    <a href="product.html"
+                        class="inline-block px-2 py-[15px] md:px-4 md:py-8 lg:px-[15px] xl:py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase transition-colors">
                         Products
                     </a>
 
                     <div
-                        class="absolute left-0 right-0 top-full hidden group-hover:block bg-white border-t-4 border-[#0c5c77] shadow-xl z-50">
+                        class="absolute left-0 top-full hidden group-hover:block bg-white border-t-4 border-[#0c5c77] shadow-xl z-[100] w-screen max-w-none lg:left-0 lg:right-0 lg:w-auto">
                         <div class="max-w-7xl mx-auto p-4 md:p-8 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8">
 
                             <div class="md:col-span-4">
-                                <h3 class="text-sm md:text-[14px] font-bold uppercase mb-4 border-b pb-4">Large Format GVT/PGVT
+                                <h3 class="text-sm md:text-[14px] font-bold uppercase mb-4 border-b pb-4">Large Format
+                                    GVT/PGVT
                                 </h3>
                                 <div class="relative overflow-hidden rounded-sm">
                                     <img src="https://www.rollence.in/assets/img/menu/menup.jpg" alt="Interior"
@@ -143,23 +157,24 @@
                         </div>
                     </div>
                 </li>
-                <li><a href="#"
-                        class="px-3 py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase whitespace-nowrap">Global
+                <li><a href="export.html"
+                        class="px-2 py-[15px] md:px-4 md:py-8 lg:px-[15px] xl:py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase whitespace-nowrap">Global
                         Presence</a></li>
-                <li><a href="#"
-                        class="px-3 py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase">Downloads</a>
+                <li><a href="downloads.html"
+                        class="px-2 py-[15px] md:px-4 md:py-8 lg:px-[15px] xl:py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase">Downloads</a>
                 </li>
-                <li><a href="#"
-                        class="px-3 py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase">Utilities</a>
+                <li><a href="tiles-calculator.html"
+                        class="px-2 py-[15px] md:px-4 md:py-8 lg:px-[15px] xl:py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase">Utilities</a>
                 </li>
-                <li><a href="#"
-                        class="px-3 py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase whitespace-nowrap">Contact
+                <li><a href="contact.html"
+                        class="px-2 py-[15px] md:px-4 md:py-8 lg:px-[15px] xl:py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase whitespace-nowrap">Contact
                         Us</a></li>
 
             </ul>
         </nav>
 
-        <div class="hidden lg:flex items-center h-full bg-[#0c5c77] px-10 space-x-9 absolute right-0">
+        <div
+            class="hidden xl:flex lg:absolute lg:right-0 items-center h-full bg-[#0c5c77] px-4 md:px-6 lg:px-[40px] space-x-4 md:space-x-6 lg:space-x-9 absolute right-0">
             <a href="#" class="text-white hover:opacity-75 transition-opacity"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="text-white hover:opacity-75 transition-opacity"><i class="fab fa-instagram"></i></a>
             <a href="#" class="text-white hover:opacity-75 transition-opacity"><i class="fab fa-linkedin-in"></i></a>
@@ -167,34 +182,44 @@
             <a href="#" class="text-white hover:opacity-75 transition-opacity"><i class="fab fa-pinterest-p"></i></a>
         </div>
 
-        <button class="lg:hidden flex flex-col justify-center items-end space-y-1 group" id="mobile-menu-button">
+        <button class="xl:hidden flex flex-col justify-center items-end space-y-1 group" id="mobile-menu-button">
             <span class="w-8 h-1 bg-[#0c5c77] block"></span>
             <span class="w-5 h-1 bg-[#0c5c77] block group-hover:w-8 transition-all"></span>
             <span class="w-7 h-1 bg-[#0c5c77] block"></span>
         </button>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="lg:hidden fixed top-0 left-0 w-full h-full bg-white z-50 transform -translate-x-full transition-transform duration-300 hidden">
+        <div id="mobile-menu-overlay" class="xl:hidden fixed inset-0 bg-black bg-opacity-50 z-[90] hidden"
+            onclick="closeMobileMenu()"></div>
+        <div id="mobile-menu"
+            class="xl:hidden fixed top-0 left-0 w-full h-full bg-white z-[100] transform -translate-x-full transition-transform duration-300 hidden">
             <div class="flex justify-between items-center p-4 border-b">
                 <img src="https://www.rollence.in/assets/img/mainlogo.png" alt="RollenceLogo" class="w-[150px] h-auto">
                 <button id="close-menu" class="text-[#0c5c77] text-2xl">&times;</button>
             </div>
             <nav class="p-4">
                 <ul class="space-y-4">
-                    <li><a href="#" class="block py-2 text-[#f7a708] font-bold uppercase">Home</a></li>
+                    <li><a href="index.html" class="block py-2 text-[#f7a708] font-bold uppercase">Home</a></li>
                     <li class="border-t pt-4">
-                        <a href="#" class="block py-2 text-black font-bold uppercase">Why Us? <i class="fa fa-caret-down ml-1"></i></a>
-                        <ul class="ml-4 mt-2 space-y-2">
-                            <li><a href="#" class="block py-1 text-sm text-gray-600 hover:text-[#0c5c77]">About Us</a></li>
-                            <li><a href="#" class="block py-1 text-sm text-gray-600 hover:text-[#0c5c77]">Quality</a></li>
-                            <li><a href="#" class="block py-1 text-sm text-gray-600 hover:text-[#0c5c77]">Certificates</a></li>
+                        <a href="#" class="block py-2 text-black font-bold uppercase flex items-center justify-between"
+                            onclick="toggleMobileSubmenu(this)">
+                            Why Us? <i class="fa fa-caret-down ml-1 transition-transform"></i>
+                        </a>
+                        <ul class="ml-4 mt-2 space-y-2 hidden">
+                            <li><a href="about-us.html"
+                                    class="block py-1 text-sm text-gray-600 hover:text-[#0c5c77]">About Us</a></li>
+                            <li><a href="quality.html"
+                                    class="block py-1 text-sm text-gray-600 hover:text-[#0c5c77]">Quality</a></li>
+                            <li><a href="certificate.html"
+                                    class="block py-1 text-sm text-gray-600 hover:text-[#0c5c77]">Certificates</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" class="block py-2 text-black font-bold uppercase">Products</a></li>
-                    <li><a href="#" class="block py-2 text-black font-bold uppercase">Global Presence</a></li>
-                    <li><a href="#" class="block py-2 text-black font-bold uppercase">Downloads</a></li>
-                    <li><a href="#" class="block py-2 text-black font-bold uppercase">Utilities</a></li>
-                    <li><a href="#" class="block py-2 text-black font-bold uppercase">Contact Us</a></li>
+                    <li><a href="product.html" class="block py-2 text-black font-bold uppercase">Products</a></li>
+                    <li><a href="export.html" class="block py-2 text-black font-bold uppercase">Global Presence</a></li>
+                    <li><a href="downloads.html" class="block py-2 text-black font-bold uppercase">Downloads</a></li>
+                    <li><a href="tiles-calculator.html" class="block py-2 text-black font-bold uppercase">Utilities</a>
+                    </li>
+                    <li><a href="contact.html" class="block py-2 text-black font-bold uppercase">Contact Us</a></li>
                 </ul>
                 <div class="mt-8 flex justify-center space-x-4">
                     <a href="#" class="text-[#0c5c77] hover:opacity-75"><i class="fab fa-facebook-f"></i></a>
@@ -203,6 +228,7 @@
                     <a href="#" class="text-[#0c5c77] hover:opacity-75"><i class="fab fa-twitter"></i></a>
                     <a href="#" class="text-[#0c5c77] hover:opacity-75"><i class="fab fa-pinterest-p"></i></a>
                 </div>
+
             </nav>
         </div>
 
@@ -212,7 +238,9 @@
     <!-- end header  -->
 
     <!-- Side buttons -->
-    <div class="fixed left-2 md:left-6 top-1/2 -translate-y-1/2 z-[100] hidden md:flex items-center">
+
+
+    <div class="fixed left-0 md:left-0 top-1/2 -translate-y-1/2 z-[100] hidden md:flex items-center">
         <a href="#"
             class="bg-[#075971] text-white py-2 md:py-3 px-2 md:px-4 flex items-center gap-2 shadow-lg transition-transform hover:scale-105"
             style="writing-mode: sideways-lr; text-orientation: mixed;">
@@ -221,26 +249,27 @@
         </a>
     </div>
 
-    <div class="fixed right-2 md:right-6 top-1/2 -translate-y-1/2 z-[100] hidden md:flex items-center">
-        <a href="#"
-            class="bg-black text-white py-4 md:py-6 px-2 md:px-3 flex flex-col items-center shadow-lg transition-transform hover:scale-105"
+    <div class="fixed right-0 md:right-0 top-1/2 -translate-y-1/2 z-[100] hidden md:flex items-center">
+        <a href="#" onclick="openQuickEnquiryModal()"
+            class="bg-black text-white py-4 md:py-6 px-2 md:px-3 flex flex-col items-center shadow-lg transition-transform hover:scale-105 cursor-pointer"
             style="writing-mode: sideways-lr; text-orientation: mixed;">
             <span class="uppercase tracking-[2px] text-[12px] md:text-[16px] font-bold">Quick Enquiry</span>
         </a>
     </div>
 
-    <div class="fixed left-2 md:left-6 bottom-2 md:bottom-6 z-[100] group">
+    <div class="fixed left-2 md:left-6 bottom-2 md:bottom-6 z-[100] group fixed-side-element">
         <a href="https://wa.me/YOURNUMBER" target="_blank"
             class="flex items-center gap-2 md:gap-3 bg-white text-[#0c5c77] px-3 md:px-6 py-1 md:py-2 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.1)] border border-gray-100 hover:scale-105 transition-transform">
             <div class="relative">
                 <i class="fab fa-whatsapp text-lg md:text-2xl text-[#0c5c77]"></i>
             </div>
             <span class="font-bold text-xs md:text-sm tracking-tight hidden sm:inline">Chat With Us</span>
-            <span class="absolute top-0 right-0 w-2 h-2 md:w-3 md:h-3 bg-[#f7a707] border-2 border-white rounded-full"></span>
+            <span
+                class="absolute top-0 right-0 w-2 h-2 md:w-3 md:h-3 bg-[#f7a707] border-2 border-white rounded-full"></span>
         </a>
     </div>
 
-    <div class="fixed right-2 md:right-6 bottom-2 md:bottom-6 z-[100]">
+    <div class="fixed right-2 md:right-6 bottom-2 md:bottom-6 z-[100] fixed-side-element">
         <button
             class="w-10 h-10 md:w-14 md:h-14 bg-[#0c5c77] rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
             <svg class="w-5 h-5 md:w-7 md:h-7 text-white fill-current" viewBox="0 0 24 24">
@@ -250,22 +279,73 @@
         </button>
     </div>
 
-    <section class="relative w-full h-screen md:h-auto overflow-hidden group">
-        <div id="slider" class="flex transition-transform duration-700 ease-in-out h-full">
-            <div class="min-w-full h-full"><img src="https://www.rollence.in/uploads/slider/h733cr.jpg"
-                    class="w-full h-full object-cover" alt="Slide 0"></div>
-            <div class="min-w-full h-full"><img src="https://www.rollence.in/uploads/slider/o_1f677ag4aros1g4m189r115398d.jpg"
-                    class="w-full h-full object-cover" alt="Slide 1"></div>
-            <div class="min-w-full h-full"><img
+    <section class="relative w-full overflow-hidden group">
+        <div id="slider" class="flex transition-transform duration-700 ease-in-out aspect-video">
+            <div class="min-w-full"><img src="https://www.rollence.in/uploads/slider/h733cr.jpg"
+                    class="w-full h-full object-contain" alt="Slide 0"></div>
+            <div class="min-w-full"><img src="https://www.rollence.in/uploads/slider/o_1f677ag4aros1g4m189r115398d.jpg"
+                    class="w-full h-full object-contain" alt="Slide 1"></div>
+            <div class="min-w-full"><img
                     src="https://www.rollence.in/uploads/slider/o_1ibqr5gds138d12c61unu87c1auqe.jpg"
-                    class="w-full h-full object-cover" alt="Slide 2"></div>
-            <div class="min-w-full h-full"><img
+                    class="w-full h-full object-contain" alt="Slide 2"></div>
+            <div class="min-w-full"><img
                     src="https://www.rollence.in/uploads/slider/o_1f677ag4acll1c351p5119g216n0g.jpg"
-                    class="w-full h-full object-cover" alt="Slide 3"></div>
+                    class="w-full h-full object-contain" alt="Slide 3"></div>
         </div>
 
     </section>
     <!-- end hero banner -->
+
+    <!-- Quick Enquiry Modal -->
+    <div id="quickEnquiryModal"
+        class="fixed inset-0 z-[200] hidden bg-black bg-opacity-50 flex items-center justify-center p-4"
+        onclick="closeQuickEnquiryModal()">
+        <div class="bg-white rounded-lg shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto"
+            onclick="event.stopPropagation()">
+            <div class="flex justify-between items-center p-6 border-b">
+                <h5 class="text-xl font-bold text-[#0c5c77]">Quick Enquiry</h5>
+                <button onclick="closeQuickEnquiryModal()"
+                    class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+            </div>
+            <div class="p-6">
+                <form name="cFrm" id="cFrm" class="contact-form" method="post">
+                    <input type="hidden" name="type" value="Quick Inquiry">
+                    <div class="mb-4">
+                        <input type="text" id="name" name="name"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0c5c77] focus:border-transparent"
+                            placeholder="Name *">
+                        <span id="name_error" class="text-red-500 text-sm mt-1 block"></span>
+                    </div>
+                    <div class="mb-4">
+                        <input type="email"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0c5c77] focus:border-transparent"
+                            placeholder="Email *" name="email" id="email">
+                        <span id="email_error" class="text-red-500 text-sm mt-1 block"></span>
+                    </div>
+                    <div class="mb-4">
+                        <input type="text"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0c5c77] focus:border-transparent"
+                            placeholder="Phone*" name="phone" id="phone">
+                        <span id="phone_error" class="text-red-500 text-sm mt-1 block"></span>
+                    </div>
+                    <div class="mb-4">
+                        <textarea name="message" id="message"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0c5c77] focus:border-transparent h-24 resize-none"
+                            placeholder="Message"></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <div class="g-recaptcha" data-sitekey="6LcGHbcZAAAAAMhSM9sTT-ihuiRLb9nxV7zdRb3z"></div>
+                        <span id="captcha_error" class="text-red-500 text-sm mt-1 block"></span>
+                    </div>
+                    <div class="text-right">
+                        <button
+                            class="bg-[#0c5c77] text-white px-6 py-2 rounded-md hover:bg-[#0a4a5f] transition-colors"
+                            type="submit" id="cBtn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- start Why choose us? -->
     <section class="relative bg-[#F5F6F8] py-20 overflow-hidden">
@@ -273,41 +353,37 @@
             class="absolute -top-[110px] -left-[130px] w-[350px] h-[350px] border-[40px] border-double border-[#0c5c77]/10 rounded-full -rotate-45 pointer-events-none">
         </div>
 
-        <div class="max-w-6xl mx-auto px-4 relative z-10">
+        <div class="max-w-7xl px-4 sm:px-6 md:px-10 lg:px-[2.5rem] mx-auto relative z-10">
             <div class="flex flex-col md:flex-row gap-12 items-start">
-                <div class="w-full md:w-xl mx-auto">
-                    <div class="flex flex-col lg:flex-row items-center gap-10">
-                        <div class="w-full lg:w-1/2 space-y-6 px-5">
-                            <h2 class="text-[#0c5c77] text-2xl md:text-3xl lg:text-[40px] font-semibold">Why choose us?</h2>
-                            <div class="space-y-4 text-[#7d7d7d] text-sm leading-relaxed">
-                                <p class="text-sm md:text-base font-extralight text-[#7d7d7d] leading-normal">
-                                    Rollence Granito is a place where you can look through sharp vision, global market,
-                                    and innovative techniques in design outlook. Our organization has the vision to
-                                    investigate the worldwide zone with the most stylish item, cost, newness and
-                                    advancement, bundling, and people groups. We made supreme quality coated tiles with
-                                    inventive viewpoints.
-                                </p>
-                                <p class="text-sm md:text-base font-extralight text-[#7d7d7d] leading-normal">
-                                    Expert and specialists will investigate all the most recent patterns in the market
-                                    to offer fulfilment to the customers, We are affirmed by the ISO 9001-2015, ISO
-                                    14001-2015 for keeping up condition, with quality norms and safety management
-                                    systems.
-                                </p>
-                            </div>
-                            <div class="pt-4">
-                                <a href="https://www.rollence.in/about-us"
-                                    class="pb-3 inline-block text-[#757575] text-sm font-bold tracking-[2.8px] border-b-2 border-gray-300 pb-2 hover:text-black hover:border-[#0c5c77] transition-all">
-                                    READ MORE
-                                </a>
-                            </div>
+                <div class="flex flex-col lg:flex-row items-center px-4">
+                    <div class="w-full lg:w-1/2 px-4">
+                        <h2 class="mb-2 text-[#0c5c77] text-2xl md:text-3xl lg:text-[40px] font-semibold">Why choose us?</h2>
+                        <div class="text-[#7d7d7d] text-sm leading-relaxed">
+                            <p class="mb-4 text-sm md:text-base font-extralight text-[#7d7d7d] leading-normal">
+                                Rollence Granito is a place where you can look through sharp vision, global market,
+                                and innovative techniques in design outlook. Our organization has the vision to
+                                investigate the worldwide zone with the most stylish item, cost, newness and
+                                advancement, bundling, and people groups. We made supreme quality coated tiles with
+                                inventive viewpoints.
+                            </p>
+                            <p class="mb-4 text-sm md:text-base font-extralight text-[#7d7d7d] leading-normal">
+                                Expert and specialists will investigate all the most recent patterns in the market
+                                to offer fulfilment to the customers, We are affirmed by the ISO 9001-2015, ISO
+                                14001-2015 for keeping up condition, with quality norms and safety management
+                                systems.
+                            </p>
                         </div>
+                        <div class="py-6">
+                            <a href="https://www.rollence.in/about-us"
+                                class=" inline-block text-[#757575] text-sm font-bold tracking-[2.8px] border-b-2 border-gray-300 pb-2 hover:text-black hover:border-[#0c5c77] transition-all">
+                                READ MORE
+                            </a>
+                        </div>
+                    </div>
 
-                        <div class="w-full lg:w-1/2 relative">
-                            <div class="relative z-10">
-                                <img src="https://www.rollence.in/assets/img/home/about1.png" alt="About Rollence"
-                                    class="w-full h-auto">
-                            </div>
-                        </div>
+                    <div class="w-full lg:w-1/2 relative px-4">
+                            <img src="https://www.rollence.in/assets/img/home/about1.png" alt="About Rollence"
+                                class="w-full">
                     </div>
                 </div>
             </div>
@@ -320,8 +396,8 @@
         <section class="relative py-20 px-4" id="collection-section">
 
             <div class="text-center mb-10 relative z-30">
-                <h2 class="text-[#0c5c77] text-3xl md:text-[40px] font-semibold">Our Collection</h2>
-                <h4 class="mb-2 font-medium leading-tight text-[#212529] text-2xl mt-2">Excellence Forever</h4>
+                <h2 class="mb-2 text-[#0c5c77] text-2xl md:text-3xl lg:text-[40px] font-semibold">Our Collection</h2>
+                <h4 class="mb-2 font-medium leading-tight text-[#757575] text-2xl mt-2">Excellence Forever</h4>
             </div>
 
             <div class="max-w-7xl px-4 sm:px-6 md:px-10 lg:px-14 mx-auto relative z-10">
@@ -335,12 +411,12 @@
                             </a>
                         </div>
                         <div class="bg-[#0c5c77] text-white pt-32 pb-8 px-8 -mt-24 relative z-10">
-                            <h3 class="text-xl font-bold mb-3 uppercase">Large Format GVT/PGVT</h3>
-                            <p class="text-blue-100 text-sm mb-6">GVT/PGVT are commonly used to cover floors and walls.
+                            <h3 class="text-[28px] font-semibold mb-2 uppercase">Large Format GVT/PGVT</h3>
+                            <p class="text-sm mb-4 font-extralight">GVT/PGVT are commonly used to cover floors and walls.
                             </p>
-                            <div class="border-b border-blue-200/50 inline-block pb-2">
+                            <div class="border-b border-blue-200/50 inline-block pb-3">
                                 <a href="#"
-                                    class="text-blue-100 text-xs font-bold tracking-[2.8px] hover:text-white transition-colors uppercase">Read
+                                    class="text-[#f0f8ffa1] text-sm font-bold tracking-[2.8px] hover:text-white transition-colors uppercase">Read
                                     More</a>
                             </div>
                         </div>
@@ -359,11 +435,11 @@
                             </a>
                         </div>
                         <div class="bg-[#0c5c77] text-white pt-32 pb-8 px-8 -mt-24 relative z-10">
-                            <h3 class="text-xl font-bold mb-3 uppercase leading-tight">Glazed Vitrified Tiles</h3>
-                            <p class="text-blue-100 text-sm mb-6">Quality of life actually begins at home.</p>
-                            <div class="border-b border-blue-200/50 inline-block pb-2">
+                            <h3 class="text-[28px] font-semibold mb-2 uppercase leading-tight">Glazed Vitrified Tiles</h3>
+                            <p class="text-sm mb-4 font-extralight">Quality of life actually begins at home.</p>
+                            <div class="border-b border-blue-200/50 inline-block pb-3">
                                 <a href="#"
-                                    class="text-blue-100 text-xs font-bold tracking-[2.8px] hover:text-white transition-colors uppercase">Read
+                                    class="text-[#f0f8ffa1] text-sm font-bold tracking-[2.8px] hover:text-white transition-colors uppercase">Read
                                     More</a>
                             </div>
                         </div>
@@ -394,10 +470,10 @@
 
         <div class="max-w-7xl px-4 sm:px-6 md:px-10 lg:px-14 mx-auto relative z-10">
             <div class="text-center mb-12">
-                <h2 class="text-[#0c5c77] text-3xl md:text-[40px] font-semibold" data-aos="fade-up">
+                <h2 class="mb-2 text-[#0c5c77] text-2xl md:text-3xl lg:text-[40px] font-semibold" data-aos="fade-up">
                     Make Your Home Beautiful With
                 </h2>
-                <h3 class="mb-2 font-medium leading-tight text-[#212529] text-2xl mt-2" data-aos="fade-up"
+                <h3 class="mb-2 font-medium leading-tight text-[#757575] text-2xl mt-2" data-aos="fade-up"
                     data-aos-delay="200">
                     Large Surfaces
                 </h3>
@@ -418,13 +494,13 @@
     <section class="relative bg-white py-20 overflow-hidden">
         <div class="max-w-7xl px-4 sm:px-6 md:px-10 lg:px-14 mx-auto">
 
-            <div class="flex flex-col md:flex-row items-start gap-8 mb-16">
-                <div class="w-full md:w-1/3 px-3">
+            <div class="flex flex-col md:flex-row items-start gap-8 mb-12">
+                <div class="w-full md:w-1/3">
                     <div class="relative min-h-[200px] md:min-h-[250px] flex items-start pt-10 md:pt-20 px-4 md:px-0">
                         <div class="absolute top-0 left-0 md:left-16 w-full h-[200px] md:h-[252px] opacity-100 z-0 bg-no-repeat bg-contain pointer-events-none"
                             style="background-image: url('https://www.rollence.in/assets/img/icons/ind_bj2.png');">
                         </div>
-                        <h2 class="relative z-10 text-3xl md:text-4xl lg:text-5xl font-bold text-black leading-tight ">
+                        <h2 class="relative z-10 text-3xl md:text-4xl lg:text-[40px] font-bold text-black leading-tight ">
                             Online Tiles <br> Visualizer
                         </h2>
                     </div>
@@ -502,48 +578,48 @@
                         <div class="flex gap-2 mb-4">
                             <a href="#" title="Facebook" class="relative group">
                                 <div
-                                    class="w-10 h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
+                                    class="w-8 h-8 md:w-10 md:h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
                                     <i
-                                        class="fab fa-facebook-f text-[#075971] text-sm group-hover:text-white transition-colors"></i>
+                                        class="fab fa-facebook-f text-[#075971] text-xs md:text-sm group-hover:text-white transition-colors"></i>
                                 </div>
                                 <span
-                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Facebook</span>
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block">Facebook</span>
                             </a>
                             <a href="#" title="Instagram" class="relative group">
                                 <div
-                                    class="w-10 h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
+                                    class="w-8 h-8 md:w-10 md:h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
                                     <i
-                                        class="fab fa-instagram text-[#075971] text-sm group-hover:text-white transition-colors"></i>
+                                        class="fab fa-instagram text-[#075971] text-xs md:text-sm group-hover:text-white transition-colors"></i>
                                 </div>
                                 <span
-                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Instagram</span>
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block">Instagram</span>
                             </a>
                             <a href="#" title="LinkedIn" class="relative group">
                                 <div
-                                    class="w-10 h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
+                                    class="w-8 h-8 md:w-10 md:h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
                                     <i
-                                        class="fab fa-linkedin-in text-[#075971] text-sm group-hover:text-white transition-colors"></i>
+                                        class="fab fa-linkedin-in text-[#075971] text-xs md:text-sm group-hover:text-white transition-colors"></i>
                                 </div>
                                 <span
-                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">LinkedIn</span>
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block">LinkedIn</span>
                             </a>
                             <a href="#" title="Twitter" class="relative group">
                                 <div
-                                    class="w-10 h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
+                                    class="w-8 h-8 md:w-10 md:h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
                                     <i
-                                        class="fab fa-twitter text-[#075971] text-sm group-hover:text-white transition-colors"></i>
+                                        class="fab fa-twitter text-[#075971] text-xs md:text-sm group-hover:text-white transition-colors"></i>
                                 </div>
                                 <span
-                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Twitter</span>
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block">Twitter</span>
                             </a>
                             <a href="#" title="Pinterest" class="relative group">
                                 <div
-                                    class="w-10 h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
+                                    class="w-8 h-8 md:w-10 md:h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
                                     <i
-                                        class="fab fa-pinterest-p text-[#075971] text-sm group-hover:text-white transition-colors"></i>
+                                        class="fab fa-pinterest-p text-[#075971] text-xs md:text-sm group-hover:text-white transition-colors"></i>
                                 </div>
                                 <span
-                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Pinterest</span>
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block">Pinterest</span>
                             </a>
                         </div>
                     </div>
@@ -652,11 +728,51 @@
         const btn = document.getElementById('mobile-menu-button');
         const closeBtn = document.getElementById('close-menu');
         const menu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('mobile-menu-overlay');
 
-        btn.addEventListener('click', () => menu.classList.remove('hidden'));
-        closeBtn.addEventListener('click', () => menu.classList.add('hidden'));
+        function openMobileMenu() {
+            menu.classList.remove('hidden');
+            overlay.classList.remove('hidden');
+            setTimeout(() => {
+                menu.classList.remove('-translate-x-full');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+            // Hide fixed side elements
+            document.querySelectorAll('.fixed-side-element').forEach(el => el.style.display = 'none');
+        }
+
+        function closeMobileMenu() {
+            menu.classList.add('-translate-x-full');
+            overlay.classList.add('hidden');
+            document.body.style.overflow = '';
+            setTimeout(() => menu.classList.add('hidden'), 300);
+            // Show fixed side elements
+            document.querySelectorAll('.fixed-side-element').forEach(el => el.style.display = '');
+        }
+
+        function toggleMobileSubmenu(element) {
+            const submenu = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            submenu.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        function openQuickEnquiryModal() {
+            document.getElementById('quickEnquiryModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeQuickEnquiryModal() {
+            document.getElementById('quickEnquiryModal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        if (btn && closeBtn && menu) {
+            btn.addEventListener('click', openMobileMenu);
+            closeBtn.addEventListener('click', closeMobileMenu);
+        }
     </script>
-    <!-- // start Simple toggle for mobile menu -->
+    <!-- // end Simple toggle for mobile menu -->
 
     <!-- start hero banneer -->
     <script>
