@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
+
+*{
+  font-family: 'Overpass', sans-serif;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-brand-blue {
+  color: #0c5c77;
+}
+
+.blog-card-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.bg-mainhero {
+  background-image: url('/assets/images/home/hero/mainhero-bg.jpg');
+}
+
+.hero-bg {
+  background-image: url('/assets/images/home/hero/mainhero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.services-bg {
+  background-image: url('/assets/images/export/services_bg.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-pos-0 {
+  top: 10%;
+  left: 50%;
+}
+
+.icon-pos-45 {
+  top: 21.5%;
+  left: 78.5%;
+}
+
+.icon-pos-90 {
+  top: 50%;
+  left: 90%;
+}
+
+.icon-pos-135 {
+  top: 78.5%;
+  left: 78.5%;
+}
+
+.icon-pos-180 {
+  top: 90%;
+  left: 50%;
+}
+
+.icon-pos-225 {
+  top: 78.5%;
+  left: 21.5%;
+}
+
+.icon-pos-270 {
+  top: 50%;
+  left: 10%;
+}
+
+.icon-pos-315 {
+  top: 21.5%;
+  left: 21.5%;
+}
+
+.icon-btn.active {
+  background-color: #0c5c77;
+  color: #ffffff;
+  width: 72px;
+  height: 72px;
+  box-shadow: 0 11px 13px rgba(12, 92, 119, 0.34);
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bg-app-logo-statuario {
+  background-image: url('/assets/images/home/header/menu-1.jpg');
+}
+
+.bg-app-logo-grey-silver {
+  background-image: url('/assets/images/home/header/menu-2.jpg');
+}
+
+.bg-app-logo-beige-crema {
+  background-image: url('/assets/images/home/header/menu-3.jpg');
+}
+
+.bg-app-logo-onyx {
+  background-image: url('/assets/images/home/header/menu-4.jpg');
+}
+
+.bg-app-logo-natural {
+  background-image: url('/assets/images/home/header/menu-5.jpg');
+}
+
+.bg-series-glossy {
+  background-image: url('/assets/images/home/header/menu-6.jpg');
+}
+
+.bg-series-brilia {
+  background-image: url('/assets/images/home/header/menu-7.jpg');
+}
+
+.bg-series-high {
+  background-image: url('/assets/images/home/header/menu-8.jpg');
+}
+
+.bg-series-marble {
+  background-image: url('/assets/images/home/header/menu-9.jpg');
+}
+
+.bg-export-bg {
+  background-image: url('/assets/images/export/export_bg.png');
+}
+
+.bg-home-marble4 {
+  background-image: url('/assets/images/home/header/menu-10.jpg');
+  background-size: cover;
+}
+
+.bg-home-marble7 {
+  background-image: url('/assets/images/home/header/menu-11.jpg');
+  background-size: cover;
+}
+
+.bg-home-narble6 {
+  background-image: url('/assets/images/home/header/menu-12.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-ind-bj2 {
+  background-image: url('/assets/images/home/header/menu-12.png');
+}
+
+.bg-vision-none {
+  background-image: url('/assets/images/home/Online-Tiles/visnone.jpg');
+  background-position: center;
+}
+
+.bg-vision {
+  background-image: url('/assets/images/home/Online-Tiles/vis.jpg');
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.writing-sideways {
+  writing-mode: sideways-lr;
+  text-orientation: mixed;
+}
+
+.w-50p {
+  width: 50%;
+}
+
+.left-50p {
+  left: 50%;
+}

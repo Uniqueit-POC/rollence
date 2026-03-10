@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,700,900&subset=latin-ext" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS (always last so it overrides others) -->
+    <link rel="stylesheet" href="assets/css/dev-style.css">
+</head>
+
+<body class="bg-[#f5f6f8] ">
+
+    <!-- start header  -->
+    <header
+        class="fixed top-0 left-0 w-full h-[90px] bg-white flex justify-between items-center z-[99] shadow-[0px_7px_59px_0_rgba(0,0,0,0.1)] px-5 sm:px-5 md:px-10 lg:px-10 xl:px-[70px] 2xl:px-[70px]">
+
+        <div class="flex-shrink-0">
+            <a href="index.html">
+                <img src="./assets/images/logo/rollence-logo.png" alt="RollenceLogo"
+                    class="w-[130px] sm:w-[140px] md:w-[150px] lg:w-[180px] xl:w-[210px] 2xl:w-[210px] h-auto object-contain">
+            </a>
+        </div>
+
+        <nav class="hidden xl:block absolute left-1/2 -translate-x-1/2 w-auto max-w-[500px] lg:max-w-none">
+            <ul class="flex items-center space-x-1">
+                <li><a href="index.html"
+                        class="px-2 py-[15px] md:px-4 md:py-8 lg:px-[15px] xl:py-10 text-[14px] font-bold text-[#f7a708] tracking-normal transition-colors uppercase">Home</a>
+                </li>
+
+                <li class="relative group">
+                    <a href="javascript:void(0);"
+                        class="px-2 py-[15px] md:px-4 md:py-8 lg:px-[15px] xl:py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase whitespace-nowrap">
+                        Why Us? <i class="fa fa-caret-down ml-1 text-[10px]"></i>
+                    </a>
+                    <ul
+                        class="absolute top-[57px] left-0 w-[250px] bg-white shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border-t-2 border-[#0c5c77]">
+                        <li><a href="about-us.html"
+                                class="block px-5 py-3 text-[13px] font-bold text-black border-b border-gray-50 hover:bg-gray-50 uppercase">About
+                                Us</a></li>
+                        <li><a href="quality.html"
+                                class="block px-5 py-3 text-[13px] font-bold text-black border-b border-gray-50 hover:bg-gray-50 uppercase">Quality</a>
+                        </li>
+                        <li><a href="certificate.html"
+                                class="block px-5 py-3 text-[13px] font-bold text-black border-b border-gray-50 hover:bg-gray-50 uppercase">Certificates</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="group static">
+                    <a href="product.html"
+                        class="inline-block px-2 py-[15px] md:px-4 md:py-8 lg:px-[15px] xl:py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase transition-colors">
+                        Products
+                    </a>
+
+                    <div
+                        class="absolute left-0 top-full hidden group-hover:block bg-white border-t-4 border-[#0c5c77] shadow-xl z-[100] w-screen max-w-none lg:left-0 lg:right-0 lg:w-auto">
+                        <div class="max-w-7xl mx-auto p-4 md:p-8 grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8">
+
+                            <div class="md:col-span-4">
+                                <h3 class="text-sm md:text-[14px] font-bold uppercase mb-4 border-b pb-4">Large Format
+                                    GVT/PGVT
+                                </h3>
+                                <div class="relative overflow-hidden rounded-sm">
+                                    <img src="./assets/images/home/header/menu.jpg" alt="Interior"
+                                        class="w-full h-auto object-cover">
+                                </div>
+                            </div>
+
+                            <div class="md:col-span-2">
+                                <h3 class="text-sm md:text-[14px] font-bold uppercase mb-4 border-b pb-4">By Size</h3>
+                                <ul class="space-y-3">
+                                    <li><a href="#"
+                                            class="block p-2 md:p-3 border border-gray-200 text-xs font-semibold text-center hover:bg-gray-50 uppercase">1000
+                                            x 1000mm</a></li>
+                                    <li><a href="#"
+                                            class="block p-2 md:p-3 border border-gray-200 text-xs font-semibold text-center hover:bg-gray-50 uppercase">1200
+                                            x 1200 mm</a></li>
+                                    <li><a href="#"
+                                            class="block p-2 md:p-3 border border-gray-200 text-xs font-semibold text-center hover:bg-gray-50 uppercase">1200
+                                            x 1800 mm</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="md:col-span-3">
+                                <h3 class="text-sm md:text-[14px] font-bold uppercase mb-4 border-b pb-4">By Series</h3>
+                                <div class="grid grid-cols-2 gap-2">
+                                    <a href="#"
+                                        class="h-16 md:h-20 flex items-center justify-center rounded-xl text-[8px] md:text-[10px] font-bold text-black border border-gray-200 bg-cover bg-center text-center px-1 bg-app-logo-statuario">STATUARIO</a>
+                                    <a href="#"
+                                        class="h-16 md:h-20 flex items-center justify-center rounded-xl text-[8px] md:text-[10px] font-bold text-black border border-gray-200 bg-cover bg-center text-center px-1 bg-app-logo-grey-silver">GREY/SILVER</a>
+                                    <a href="#"
+                                        class="h-16 md:h-20 flex items-center justify-center rounded-xl text-[8px] md:text-[10px] font-bold text-black border border-gray-200 bg-cover bg-center text-center px-1 bg-app-logo-beige-crema">BEIGE/CREMA</a>
+                                    <a href="#"
+                                        class="h-16 md:h-20 flex items-center justify-center rounded-xl text-[8px] md:text-[10px] font-bold text-black border border-gray-200 bg-cover bg-center text-center px-1 bg-app-logo-onyx">ONYX</a>
+                                    <a href="#"
+                                        class="h-16 md:h-20 flex items-center justify-center rounded-xl text-[8px] md:text-[10px] font-bold text-black border border-gray-200 bg-cover bg-center text-center px-1 bg-app-logo-natural">NATURAL</a>
+                                </div>
+                            </div>
+
+                            <div class="md:col-span-3">
+                                <h3 class="text-sm md:text-[14px] font-bold uppercase mb-4 border-b pb-4">By Finish</h3>
+                                <div class="space-y-2">
+                                    <a href="#"
+                                        class="block h-10 md:h-12 flex items-center px-2 md:px-4 font-bold text-white text-xs uppercase bg-cover bg-center brightness-90 hover:brightness-110 bg-series-glossy">Glossy</a>
+                                    <a href="#"
+                                        class="block h-10 md:h-12 flex items-center px-2 md:px-4 font-bold text-white text-xs uppercase bg-cover bg-center brightness-75 hover:brightness-100 bg-series-brilia">Brilia</a>
+                                    <a href="#"
+                                        class="block h-10 md:h-12 flex items-center px-2 md:px-4 font-bold text-white text-xs uppercase bg-cover bg-center brightness-50 hover:brightness-90 bg-series-high">High
+                                        Gloss</a>
+                                    <a href="#"
+                                        class="block h-10 md:h-12 flex items-center px-2 md:px-4 font-bold text-white text-xs uppercase bg-cover bg-center brightness-75 hover:brightness-100 bg-series-marble">Marble</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+                <li><a href="export.html"
+                        class="px-2 py-[15px] md:px-4 md:py-8 lg:px-[15px] xl:py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase whitespace-nowrap">Global
+                        Presence</a></li>
+                <li><a href="downloads.html"
+                        class="px-2 py-[15px] md:px-4 md:py-8 lg:px-[15px] xl:py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase">Downloads</a>
+                </li>
+                <li class="relative group">
+                    <a href="javascript:void(0);"
+                        class="px-4 py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase whitespace-nowrap">Utilities
+                        <i class="fa fa-caret-down ml-1 text-[10px]"></i>
+                    </a>
+                    <ul
+                        class="absolute top-[57px] left-0 w-[250px] bg-white shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border-t-2 border-[#0c5c77]">
+                        <li><a href="media.html"
+                                class="block px-5 py-3 text-[13px] font-bold text-black border-b border-gray-50 hover:bg-gray-50 uppercase">Rollence
+                                Media</a></li>
+                        <li><a href="blog.html"
+                                class="block px-5 py-3 text-[13px] font-bold text-black border-b border-gray-50 hover:bg-gray-50 uppercase">Blog</a>
+                        </li>
+                        <li><a href="packing-details.html"
+                                class="block px-5 py-3 text-[13px] font-bold text-black border-b border-gray-50 hover:bg-gray-50 uppercase">Packing
+                                Details</a></li>
+                        <li><a href="tiles-calculator.html"
+                                class="block px-5 py-3 text-[13px] font-bold text-black border-b border-gray-50 hover:bg-gray-50 uppercase">Tiles
+                                Calculator</a></li>
+                        <li><a href="https://tilesview.com/app/login.php?login_backend=MzIyM3RpbGVzcHJldmlld18xOTk0"
+                                class="block px-5 py-3 text-[13px] font-bold text-black border-b border-gray-50 hover:bg-gray-50 uppercase">Tiles
+                                Visualizer</a></li>
+                        <li><a href="other-pages.html"
+                                class="block px-5 py-3 text-[13px] font-bold text-black border-b border-gray-50 hover:bg-gray-50 uppercase">Other
+                                Pages</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html"
+                        class="px-2 py-[15px] md:px-4 md:py-8 lg:px-[15px] xl:py-10 text-[14px] font-bold text-black tracking-normal hover:text-[#0c5c77] uppercase whitespace-nowrap">Contact
+                        Us</a></li>
+
+            </ul>
+        </nav>
+
+        <div
+            class="hidden xl:flex lg:absolute lg:right-0 items-center h-full bg-[#0c5c77] px-4 md:px-6 lg:px-[40px] space-x-4 md:space-x-6 lg:space-x-9 absolute right-0">
+            <a href="https://www.facebook.com/rollencegranito/"
+                class="text-white hover:opacity-75 transition-opacity"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/rollence_granito/"
+                class="text-white hover:opacity-75 transition-opacity"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/rollence-granito-2020/"
+                class="text-white hover:opacity-75 transition-opacity"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://x.com/GranitoRollence" class="text-white hover:opacity-75 transition-opacity"><i
+                    class="fab fa-twitter"></i></a>
+            <a href="https://in.pinterest.com/rollanancegranito/"
+                class="text-white hover:opacity-75 transition-opacity"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+
+        <button class="xl:hidden flex flex-col justify-center items-end space-y-1 group" id="mobile-menu-button">
+            <span class="w-8 h-1 bg-[#0c5c77] block"></span>
+            <span class="w-5 h-1 bg-[#0c5c77] block group-hover:w-8 transition-all"></span>
+            <span class="w-7 h-1 bg-[#0c5c77] block"></span>
+        </button>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu-overlay" class="xl:hidden fixed inset-0 bg-black bg-opacity-50 z-[90] hidden"
+            onclick="closeMobileMenu()"></div>
+        <div id="mobile-menu"
+            class="xl:hidden fixed top-0 left-0 w-full h-full bg-white z-[100] transform -translate-x-full transition-transform duration-300 hidden">
+            <div class="flex justify-between items-center p-4 border-b">
+                <img src="./assets/images/logo/rollence-logo.png" alt="RollenceLogo" class="w-[150px] h-auto">
+                <button id="close-menu" class="text-[#0c5c77] text-2xl">&times;</button>
+            </div>
+            <nav class="p-4">
+                <ul class="space-y-4">
+                    <li><a href="index.html" class="block py-2 text-[#f7a708] font-bold uppercase">Home</a></li>
+                    <li class="border-t pt-4">
+                        <a href="javascript:void(0);"
+                            class="block py-2 text-black font-bold uppercase flex items-center justify-between"
+                            onclick="toggleMobileSubmenu(this)">
+                            Why Us? <i class="fa fa-caret-down ml-1 transition-transform"></i>
+                        </a>
+                        <ul class="ml-4 mt-2 space-y-2 hidden">
+                            <li><a href="about-us.html"
+                                    class="block py-1 text-sm text-gray-600 hover:text-[#0c5c77]">About Us</a></li>
+                            <li><a href="quality.html"
+                                    class="block py-1 text-sm text-gray-600 hover:text-[#0c5c77]">Quality</a></li>
+                            <li><a href="certificate.html"
+                                    class="block py-1 text-sm text-gray-600 hover:text-[#0c5c77]">Certificates</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="product.html" class="block py-2 text-black font-bold uppercase">Products</a></li>
+                    <li><a href="export.html" class="block py-2 text-black font-bold uppercase">Global Presence</a></li>
+                    <li><a href="downloads.html" class="block py-2 text-black font-bold uppercase">Downloads</a></li>
+                    <li><a href="tiles-calculator.html" class="block py-2 text-black font-bold uppercase">Utilities</a>
+                    </li>
+                    <li><a href="contact.html" class="block py-2 text-black font-bold uppercase">Contact Us</a></li>
+                </ul>
+                <div class="mt-8 flex justify-center space-x-4">
+                    <a href="https://www.facebook.com/rollencegranito/" class="text-[#0c5c77] hover:opacity-75"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/rollence_granito/" class="text-[#0c5c77] hover:opacity-75"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/rollence-granito-2020/"
+                        class="text-[#0c5c77] hover:opacity-75"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://x.com/GranitoRollence" class="text-[#0c5c77] hover:opacity-75"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://in.pinterest.com/rollanancegranito/" class="text-[#0c5c77] hover:opacity-75"><i
+                            class="fab fa-pinterest-p"></i></a>
+                </div>
+
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="h-[90px]"></div>
+    <!-- end header  -->
+
+    <!-- Side buttons -->
+    <div class="fixed left-0 md:left-0 top-1/2 -translate-y-1/2 z-[100] hidden md:flex items-center">
+        <a href="#"
+            class="bg-[#075971] text-white py-2 md:py-3 px-2 md:px-4 flex items-center gap-2 shadow-lg transition-transform hover:scale-105 writing-sideways">
+            <i class="fa fa-cubes rotate-90 mb-2"></i>
+            <span class="uppercase tracking-[3px] text-[10px] md:text-[13px] font-semibold py-2">Tiles View</span>
+        </a>
+    </div>
+
+
+    <div class="fixed left-2 md:left-6 bottom-2 md:bottom-6 z-[100] group fixed-side-element">
+        <button onclick="widgetToggle()"
+            class="flex items-center gap-2 md:gap-3 bg-white text-[#0c5c77] px-3 md:px-6 py-1 md:py-2 rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.1)] border border-gray-100 hover:scale-105 transition-all">
+            <div class="relative">
+                <i class="fab fa-whatsapp text-lg md:text-2xl text-[#0c5c77]"></i>
+            </div>
+            <span class="font-bold text-xs md:text-sm tracking-tight hidden sm:inline">Chat With Us</span>
+            <span
+                class="absolute top-0 right-0 w-2 h-2 md:w-3 md:h-3 bg-[#f7a707] border-2 border-white rounded-full"></span>
+        </button>
+    </div>
+
+    <div id="widToggle"
+        class="hidden fixed left-2 md:left-6 bottom-16 md:bottom-20 w-72 md:w-80 bg-white shadow-2xl z-[110] rounded-xl overflow-hidden border border-gray-100 transition-all">
+
+        <div class="relative flex flex-col w-full bg-[#075e54]">
+            <span
+                class="absolute right-2 top-2 text-white/80 hover:text-white cursor-pointer z-10 bg-black/20 rounded-full w-6 h-6 flex items-center justify-center font-bold"
+                onclick="widgetToggle()">✕</span>
+
+            <div class="h-32 overflow-hidden">
+                <img src="./assets/images/home/Online-Tiles/vis.jpg" class="w-full h-full object-cover opacity-80"
+                    alt="Banner">
+            </div>
+            <div class="p-4 -mt-8 flex items-end gap-3">
+                <img src="./assets/images/logo/favicon.ico"
+                    class="w-16 h-16 rounded-full border-4 border-white bg-white shadow-lg select-none" alt="Profile">
+                <div class="mb-1">
+                    <h4 class="text-white font-bold text-sm">Rollence Support</h4>
+                    <p class="text-white/70 text-[10px] flex items-center gap-1">
+                        <span class="w-2 h-2 bg-green-400 rounded-full"></span> Typically replies in minutes
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 bg-[#e5ddd5] min-h-[60px]">
+            <div class="bg-white p-3 rounded-lg rounded-tl-none shadow-sm text-xs text-gray-700 relative">
+                Hi there! How can we help you today?
+                <div class="absolute top-0 -left-2 border-8 border-transparent border-t-white border-r-white"></div>
+            </div>
+        </div>
+
+        <div class="p-4 flex justify-center bg-white">
+            <a href="https://api.whatsapp.com/send?phone=919726055557&text=Hi" target="_blank"
+                class="flex items-center justify-center gap-2 bg-[#0c5c77] hover:bg-[#128c7e] text-white w-full py-2 rounded-full font-bold shadow-md transition-all uppercase text-xs tracking-wider">
+                <i class="fab fa-whatsapp text-lg"></i> Start Chat
+            </a>
+        </div>
+    </div>
+
+    <div class="fixed right-2 md:right-6 bottom-2 md:bottom-6 z-[100] fixed-side-element">
+        <button
+            class="w-10 h-10 md:w-14 md:h-14 bg-[#0c5c77] rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
+            <svg class="w-5 h-5 md:w-7 md:h-7 text-white fill-current" viewBox="0 0 24 24">
+                <path
+                    d="M12 2C6.477 2 2 6.477 2 12c0 1.821.487 3.53 1.338 5L2 22l5-1.338c1.47.851 3.179 1.338 5 1.338 5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.477 0-2.854-.395-4.041-1.082l-2.895.776.776-2.895A7.953 7.953 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z" />
+            </svg>
+        </button>
+    </div>
+
+    <section
+        class="hero-bg h-[300px] md:h-[400px] flex flex-col items-center justify-center text-center px-4 bg-mainhero">
+        <div class="text-center">
+            <h1 class="text-[24px] md:text-[30px] tracking-[1.4px] font-black text-[#0c5c77] mb-6">Ceramic Tiles Manufacturer in India</h1>
+
+            <nav
+                class="flex justify-center gap-2  text-sm font-light text-gray-400 tracking-[0.28px] leading-none relative no-underline hover:text-[#0c5c77]">
+                <a href="index.html" class="">Home</a>
+                <span>|</span>
+                <span class="cursor-default">Why Us?</span>
+                <span>|</span>
+                <a href="about-us.html" class="text-[#0c5c77]">About Us</a>
+            </nav>
+        </div>
+    </section>
+
+   <div class="bg-white min-h-screen font-sans text-slate-800">
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="flex flex-col lg:flex-row gap-12 items-center mb-20">
+            <div class="lg:w-1/2">
+                <div class="relative group">
+                    <img src="assets/images/other-pages/ceramic-tiles-manufacturer-in-india.png" alt="Ceramic Tiles Manufacturer India"
+                        class="rounded-3xl shadow-2xl w-full object-cover border-8 border-slate-50">
+                    <div class="absolute -bottom-6 -right-6 bg-[#0c5c77] text-white p-6 rounded-2xl shadow-xl hidden md:block">
+                        <p class="text-2xl font-bold">Best Exporter</p>
+                        <p class="text-xs uppercase tracking-widest opacity-80">Premium Quality</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:w-1/2 space-y-6">
+                <h1 class="text-4xl font-extrabold text-[#0c5c77] leading-tight">Ceramic Tiles Exporter in India</h1>
+                <p class="text-slate-600 leading-relaxed text-lg">
+                    If you're searching for high-quality ceramic tiles in India, look no further than <strong>Rollence Granito</strong>. As a trusted exporter of ceramic tiles, we offer a wide range of colors, textures, and finishes to choose from.
+                </p>
+                <p class="text-slate-600 leading-relaxed">
+                    Our tiles are perfect for both residential and commercial use, and we provide customization options to help you find the perfect fit for your project. Whether it's a high-traffic commercial space or your dream home, our products are designed to last for years to come.
+                </p>
+                <div class="flex flex-wrap gap-3 pt-2">
+                    <span class="bg-blue-50 px-4 py-2 rounded-full text-xs font-bold text-[#0c5c77] border border-blue-100">Residential</span>
+                    <span class="bg-blue-50 px-4 py-2 rounded-full text-xs font-bold text-[#0c5c77] border border-blue-100">Commercial</span>
+                    <span class="bg-blue-50 px-4 py-2 rounded-full text-xs font-bold text-[#0c5c77] border border-blue-100">Custom Designs</span>
+                </div>
+            </div>
+        </div>
+
+        <section class="mb-20">
+            <div class="bg-slate-50 p-8 md:p-12 rounded-[40px] border border-slate-100 shadow-sm">
+                <h2 class="text-3xl font-bold text-[#0c5c77] mb-8 text-center">How to choose Ceramic Tiles?</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="space-y-3">
+                        <div class="text-[#0c5c77] font-bold text-xl">01. Purpose</div>
+                        <p class="text-sm text-slate-600">Consider high traffic, moisture, or heavy objects to determine the suitable tile type.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="text-[#0c5c77] font-bold text-xl">02. Style</div>
+                        <p class="text-sm text-slate-600">Choose colors and patterns that complement your room or mix-and-match for a unique look.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="text-[#0c5c77] font-bold text-xl">03. Durability</div>
+                        <p class="text-sm text-slate-600">Our tiles are resistant to scratches and stains, ensuring they endure wear and tear.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="text-[#0c5c77] font-bold text-xl">04. Maintenance</div>
+                        <p class="text-sm text-slate-600">Pick tiles that fit the time and effort you are willing to invest in upkeep.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+            <div>
+                <h2 class="text-3xl font-bold text-slate-900 mb-6">What are the benefits of Ceramic tiles?</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="bg-[#0c5c77] text-white p-3 rounded-xl h-fit"><i class="fas fa-shield-alt"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg">Extreme Durability</h4>
+                            <p class="text-slate-600 text-sm">Resistant to chips and cracks, perfect for bathrooms and kitchens.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="bg-[#0c5c77] text-white p-3 rounded-xl h-fit"><i class="fas fa-yin-yang"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg">Easy Maintenance</h4>
+                            <p class="text-slate-600 text-sm">Regular sweeping and mopping are all you need to keep them looking new.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="bg-[#0c5c77] text-white p-3 rounded-xl h-fit"><i class="fas fa-leaf"></i></div>
+                        <div>
+                            <h4 class="font-bold text-lg">Sustainability & Health</h4>
+                            <p class="text-slate-600 text-sm">Hypoallergenic, slip-resistant, and made from natural eco-friendly materials.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-900 p-10 rounded-3xl text-white">
+                <h3 class="text-2xl font-bold mb-4">Rollence Granito Advantage</h3>
+                <p class="text-slate-400 mb-6 leading-relaxed">
+                    We use cutting-edge technology and high-quality materials to ensure longevity. Our experts are always available to help you select the right size—from floorings to backsplashes.
+                </p>
+                <ul class="space-y-3 text-sm font-medium">
+                    <li class="flex items-center gap-2"><span class="text-green-400">✔</span> Cutting-edge technology</li>
+                    <li class="flex items-center gap-2"><span class="text-green-400">✔</span> Fast International Shipping</li>
+                    <li class="flex items-center gap-2"><span class="text-green-400">✔</span> Exceptional Customer Service</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-black text-slate-900">Checkout our Collection</h2>
+                </div>
+                <p class="text-slate-500 font-medium md:max-w-xs mt-4 italic">The Best Ceramic Tiles Exporter from India.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group relative overflow-hidden rounded-3xl bg-slate-100 shadow-lg">
+                    <img src="./assets/images/other-pages/ceramic-tiles-manufacturer-in-india.png" class="w-full h-80 object-cover group-hover:scale-110 transition-all duration-700" alt="Glossy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <h5 class="text-2xl font-bold mb-1">Glossy Series</h5>
+                        <span class="text-slate-300 font-medium text-sm tracking-widest uppercase">800 x 800 mm</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-3xl bg-slate-100 shadow-lg">
+                    <img src="./assets/images/other-pages/ceramic-tiles-manufacturer-in-india.png" class="w-full h-80 object-cover group-hover:scale-110 transition-all duration-700" alt="Matt">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <h5 class="text-2xl font-bold mb-1">Matt Glossy</h5>
+                        <span class="text-slate-300 font-medium text-sm tracking-widest uppercase">800 x 800 mm</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-3xl bg-slate-100 shadow-lg">
+                    <img src="./assets/images/other-pages/ceramic-tiles-manufacturer-in-india.png" class="w-full h-80 object-cover group-hover:scale-110 transition-all duration-700" alt="Rustic">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white">
+                        <h5 class="text-2xl font-bold mb-1">Rustic Finish</h5>
+                        <span class="text-slate-300 font-medium text-sm tracking-widest uppercase">1200 x 1200 mm</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+    <!-- start footer -->
+    <footer class="bg-[#f8f9fa] pt-16 relative overflow-hidden">
+        <div class="absolute -top-10 -left-10 w-40 h-40 border-2 border-gray-200 rounded-full opacity-30"></div>
+
+        <div class="max-w-7xl px-2 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-6">
+
+                <!-- First Column - Logo, Social & Intro -->
+                <div class="space-y-6">
+                    <img src="./assets/images/logo/rollence-logo.png" alt="Rollence Granito" class="w-40 h-auto">
+
+                    <div>
+                        <h3 class="text-[#075971] font-bold text-lg mb-3 uppercase tracking-wider">ROLLENCE GRANITO</h3>
+                        <div class="flex gap-2 mb-4">
+                            <a href="https://www.facebook.com/rollencegranito/" title="Facebook" class="relative group">
+                                <div
+                                    class="w-10 h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
+                                    <i
+                                        class="fab fa-facebook-f text-[#075971] text-sm group-hover:text-white transition-colors"></i>
+                                </div>
+                                <span
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Facebook</span>
+                            </a>
+                            <a href="https://www.instagram.com/rollence_granito/" title="Instagram"
+                                class="relative group">
+                                <div
+                                    class="w-10 h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
+                                    <i
+                                        class="fab fa-instagram text-[#075971] text-sm group-hover:text-white transition-colors"></i>
+                                </div>
+                                <span
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Instagram</span>
+                            </a>
+                            <a href="https://www.linkedin.com/company/rollence-granito-2020/" title="LinkedIn"
+                                class="relative group">
+                                <div
+                                    class="w-10 h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
+                                    <i
+                                        class="fab fa-linkedin-in text-[#075971] text-sm group-hover:text-white transition-colors"></i>
+                                </div>
+                                <span
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">LinkedIn</span>
+                            </a>
+                            <a href="https://x.com/GranitoRollence" title="Twitter" class="relative group">
+                                <div
+                                    class="w-10 h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
+                                    <i
+                                        class="fab fa-twitter text-[#075971] text-sm group-hover:text-white transition-colors"></i>
+                                </div>
+                                <span
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Twitter</span>
+                            </a>
+                            <a href="https://in.pinterest.com/rollanancegranito/" title="Pinterest"
+                                class="relative group">
+                                <div
+                                    class="w-10 h-10 border-2 border-[#075971] rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all duration-300">
+                                    <i
+                                        class="fab fa-pinterest-p text-[#075971] text-sm group-hover:text-white transition-colors"></i>
+                                </div>
+                                <span
+                                    class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#075971] text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Pinterest</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-gray-600 leading-relaxed">Rollence Granito is a place where you can look
+                        through sharp vision, global market, and innovative techniques in design outlook.</p>
+                </div>
+
+                <!-- Technical Corner -->
+                <div>
+                    <h3 class="text-[#075971] font-bold text-lg mb-6 uppercase tracking-wider">Technical Corner</h3>
+                    <ul class="space-y-3 text-sm text-gray-600 font-medium">
+                        <li><a href="quality.html" class="hover:text-[#075971] transition-all hover:pl-2">Quality</a>
+                        </li>
+                        <li><a href="tiles-calculator.html" class="hover:text-[#075971] transition-all hover:pl-2">Tile
+                                Calculator</a></li>
+                        <li><a href="media.html" class="hover:text-[#075971] transition-all hover:pl-2">Rollence
+                                Media</a></li>
+                        <li><a href="export.html" class="hover:text-[#075971] transition-all hover:pl-2">Global
+                                Presence</a></li>
+                        <li><a href="other-pages.html" class="hover:text-[#075971] transition-all hover:pl-2">Care &
+                                Maintenance</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-[#075971] font-bold text-lg mb-6 uppercase tracking-wider">Quick Links</h3>
+                    <ul class="space-y-3 text-sm text-gray-600 font-medium">
+                        <li><a href="index.html" class="hover:text-[#075971] transition-all hover:pl-2">Home</a></li>
+                        <li><a href="about-us.html" class="hover:text-[#075971] transition-all hover:pl-2">About Us</a>
+                        </li>
+                        <li><a href="certificate.html"
+                                class="hover:text-[#075971] transition-all hover:pl-2">Certificates</a></li>
+                        <li><a href="downloads.html"
+                                class="hover:text-[#075971] transition-all hover:pl-2">Downloads</a></li>
+                        <li><a href="https://tilesview.com/app/login.php?login_backend=MzIyM3RpbGVzcHJldmlld18xOTk0"
+                                class="hover:text-[#075971] transition-all hover:pl-2">Tiles Visualizer</a></li>
+                    </ul>
+                </div>
+
+                <!-- Export Worldwide -->
+                <div>
+                    <h3 class="text-[#075971] font-bold text-lg mb-6 uppercase tracking-wider">Export Worldwide</h3>
+                    <ul class="space-y-3 text-sm text-gray-600 font-medium leading-tight">
+                        <li><a href="export.html" class="hover:text-[#075971]">1200 x 1200 mm Iraq</a></li>
+                        <li><a href="export.html" class="hover:text-[#075971]">800 x 1600 mm Egypt</a></li>
+                        <li><a href="export.html" class="hover:text-[#075971]">1200 x 1800 mm Iraq</a></li>
+                        <li><a href="export.html" class="hover:text-[#075971]">800 x 1600 mm Iraq</a></li>
+                    </ul>
+                </div>
+
+                <!-- Last Column - Contact Info -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-[#075971] font-bold text-lg mb-3 uppercase tracking-wider">For Domestic Inquiry
+                        </h3>
+                        <div class="space-y-2 text-sm text-gray-600">
+                            <p class="flex items-center gap-3"><i class="fa fa-envelope text-[#075971]"></i> <a
+                                    href="mailto:info@rollence.in"
+                                    class="hover:text-orange-500 transition-colors">info@rollence.in</a></p>
+                            <p class="flex items-center gap-3"><i class="fa fa-headphones text-[#075971]"></i> <a
+                                    href="tel:+919726055557" class="hover:text-orange-500 transition-colors">+91 97260
+                                    55557</a></p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-[#075971] font-bold text-lg mb-3 uppercase tracking-wider">For Export Inquiry
+                        </h3>
+                        <div class="space-y-2 text-sm text-gray-600">
+                            <p class="flex items-center gap-3"><i class="fa fa-envelope text-[#075971]"></i> <a
+                                    href="mailto:export@rollence.in"
+                                    class="hover:text-orange-500 transition-colors">export@rollence.in</a></p>
+                            <p class="flex items-center gap-3"><i class="fa fa-headphones text-[#075971]"></i> <a
+                                    href="tel:+919879470126" class="hover:text-orange-500 transition-colors">+91 98794
+                                    70126</a></p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-[#075971] font-bold text-lg mb-3 uppercase tracking-wider">Reach Us</h3>
+                        <div class="flex gap-4 text-sm text-gray-600 leading-relaxed">
+                            <i class="fas fa-map-marker-alt text-[#075971] text-lg mt-1 flex-shrink-0"></i>
+                            <p>
+                                Sr. No. 197, Matel Road,<br>
+                                Opp. Amardham Ashram,<br>
+                                Matel-363621, Dist: Morbi,<br>
+                                Gujarat, INDIA.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom - Copyright -->
+        <div class="bg-[#075971] border-t border-gray-100 py-4 mt-4">
+            <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-6 max-w-7xl">
+                <div class="flex flex-col md:flex-row justify-center items-center">
+                    <!-- Copyright -->
+                    <p class="text-xs text-white font-medium uppercase tracking-widest text-center">
+                        © 2026 Rollence Granito | Designed by <a href="theuniqueitsolution.com"
+                            class="text-orange-400 hover:text-orange-300">Unique IT Solution</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <script src="./assets/js/dev-script.js"></script>
+</body>
+
+</html>
